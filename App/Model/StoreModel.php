@@ -19,4 +19,14 @@ class StoreModel extends BaseModel
         $stmt = $this->connect->query($sql);
         return $stmt->fetchAll(\PDO::FETCH_OBJ);
     }
+
+    public function addFood($food, $id)
+    {
+        $sql = "insert into $this->table (name,image) values (?,?) where user_id = ?";
+        $stmt = $this->connect->prepare($sql);
+        $stmt->bindParam(1, $food['name']);
+        $stmt->bindParam(2, $food['image']);
+        $stmt->bindParam(3, $id);
+        $stmt->execute();
+    }
 }

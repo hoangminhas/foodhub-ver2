@@ -16,7 +16,7 @@ include 'App/View/layout/navbar.php';
                     <li class="list-group-item">A third item</li>
                 </ul>
                 <div class="card-body">
-                    <a href="#" class="card-link">Card link</a>
+                    <a href="index.php?page=create-food" class="card-link">Add Food</a>
                     <a href="#" class="card-link">Another link</a>
                 </div>
             </div>

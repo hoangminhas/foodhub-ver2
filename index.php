@@ -35,6 +35,9 @@ switch ($page) {
     case "store-list":
         $storeController->showAll();
         break;
+    case 'create-food':
+        $storeController->createFood($_POST);
+        break;
     case "home":
         $userController->home();
         break;
